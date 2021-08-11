@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-black: #27293d;
+    --secundary-black: #1e1e2e;
+    --white-color: rgb(184, 184, 184);
+    --purple-color: #a70ad4;
+    --red-color: #ff0000;
+    --green-color: #00FF00;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary-black);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: var(--white-color);
+    margin: 20px 0;
+}
+
+p,
+a {
+    color: var(--white-color);
+}
+
+::selection {
+    color: var(--purple-color);
+}
+
+.neutralArea {
+    width: 450px;
+    height: 150px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid var(--purple-color);
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secundary-black);
+    color: var(--white-color);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.item.dragging {
+    opacity: 0.5;
+}
+
+.areas {
+    width: 450px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.areas.correct .area {
+    border: 2px solid var(--green-color);
+}
+
+.area {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--purple-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    margin-top: 20px;
+    color: var(--white-color);
+    font-size: 13px;
+}
+
+.reference {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+}
+
+.fa-heart {
+    color: var(--red-color);
+}
